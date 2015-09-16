@@ -94,8 +94,8 @@
 		init: function () {
 			var that = this;
 			
-			that.objW = that.obj.width();
-			that.objH = that.obj.height();
+			that.objW = ( that.obj.data('real_width') ? that.obj.data('real_width') : that.obj.width() );
+			that.objH = ( that.obj.data('real_height') ? that.obj.data('real_height') : that.obj.width() );
 			
 			// reset rotation
 			that.actualRotation = 0;
